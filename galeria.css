@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+#inputImagen{
+    display: none;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    
+}
+
+.conatiner-upload{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.conatiner-upload button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #9CFFFA;
+}
+
+.conatiner-upload button:hover{
+    background-color: #7AC0BC;
+    cursor: pointer;
+}
+
+.conatiner-upload button i{
+    font-size: 20px;
+    animation: upAndDown 2s linear infinite; /* Aplicar la animación "upAndDown" al icono */
+}
+
+@keyframes upAndDown {
+  0%, 100% {
+    transform: translateY(0); /* El icono en su posición inicial y final (no se mueve) */
+  }
+  50% {
+    transform: translateY(-5px); /* El icono se mueve hacia arriba 20px */
+  }
+}
+
+#imagenPreview img{
+    max-width: 500px;
+}
+
+.btn-none{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+}
+
+.open-form{
+    opacity: 1;
+    pointer-events: unset;
+    display: flex;
+}
+
+
+.form input{
+width: 70%;
+padding: 5px 5px;
+margin: 20px 0;
+border-radius: 5px;
+border: none;
+border-bottom: 1px solid #c2c2c2;
+}
+
+
+.ov-btn-grow-box {
+    width: 20%;
+    background: #fff; 
+    color: #4741d7; 
+    border: 2px solid #4741d7;
+    padding: 8px 20px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .ov-btn-grow-box:hover {
+    color: #fff;
+  }
+  .ov-btn-grow-box::after {
+    content: "";
+    background: #4741d7; 
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0);
+    transition: all 0.3s ease;
+  }
+  .ov-btn-grow-box:hover::after {
+    transition: all 0.3s ease-out;
+    transform: scale(1, 1);
+  }
+
+  .box img{
+    width: 100px;
+  }
+
